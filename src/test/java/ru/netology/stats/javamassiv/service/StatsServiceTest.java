@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class StatsServiceTest {
 
     @Test
-    public void sumOfAllSales(){
+    public void sumOfAllSales() {
         StatsService service = new StatsService();
 
         int[] salesPerMonth = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
@@ -51,9 +51,9 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
 
         int[] salesPerMonth = {8, 15, 13, 15, 17, 20, 19, 21, 7, 14, 14, 18};
-        int expected = 5;
-        int actual = service.numberOfMonthsBelowAverage(salesPerMonth);
-        Assertions.assertEquals(expected, actual);
+        int expectedBelow = 5;
+        int actualBelow = service.numberOfMonthsBelowAverage(salesPerMonth);
+        Assertions.assertEquals(expectedBelow, actualBelow);
     }
 
     @Test
@@ -61,8 +61,8 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
 
         int[] salesPerMonth = {8, 15, 13, 15, 17, 20, 19, 21, 7, 14, 14, 18};
-        int expected = 5;
-        int actual = service.numberOfMonthsAboveAverage(salesPerMonth);
-        Assertions.assertEquals(expected, actual);
+        int expectedAbove = 5;
+        int actualAbove = service.numberOfMonthsAboveAverage(salesPerMonth);
+        Assertions.assertEquals(expectedAbove, actualAbove);
     }
 }
